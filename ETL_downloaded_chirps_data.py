@@ -77,9 +77,12 @@ def process_nc_files(lat_min, lat_max, lon_min, lon_max, start_year, end_year):
         'lon': ds_interp['lon']
     })
 
-    # Passo 12: Salvar o Dataset em um arquivo .nc
-    output_filename = f'dataset-chirps-{start_year}-{end_year or "2024"}-seq5-ystep5.nc'
+    # Passo 12: Criar o diretório 'data' se não existir e salvar o Dataset em um arquivo .nc
+    #os.makedirs('data', exist_ok=True)  # Garante que o diretório 'data' existe
+    output_filename = os.path.join('data', f'dataset-chirps-{start_year}-{end_year or "2024"}-seq5-ystep5.nc')
     ds_out.to_netcdf(output_filename)
+
+
 
     # Passo 13: Verificar as dimensões resultantes
     print(ds_out)
