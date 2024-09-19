@@ -24,6 +24,37 @@ All datasets are publicly available at http://doi.org/10.5281/zenodo.3558773. Da
 Note: In the *15-step ahead* datasets, just for the convenience of having the input and targe tensors in the same file, we define them in the same shape
 (# of samples, **15**, # of latitude, # of longitude, 1). However, in the code, we force the correct length of the input sequence in the tensor as shown [here](https://github.com/MLRG-CEFET-RJ/stconvs2s/blob/master/tool/dataset.py#L24).
 
+
+
+### Download and Preprocessing CHIRPS Data
+
+Below, we explain how to download and preprocess the CHIRPS dataset, which provides daily precipitation estimates:
+
+1. **Download**: The `download_chirps_data.py` script downloads the CHIRPS NetCDF data for the specified period. You can define the start and end years using command-line arguments.
+
+   Example usage to download data between 2000 and 2010:
+   
+   ```
+   python download_chirps_data.py --start-year 2000 --end-year 2010
+   ```
+
+   If no arguments are provided, the script will download all available data.
+
+2. **Data Processing and Selection**: The `ETL_downloaded_chirps_data.py` script allows you to select and process the CHIRPS data based on latitude, longitude, and year range. It also performs spatial interpolation to adjust the data to the desired resolution.
+
+   Example usage to process data for a specific region between 2000 and 2010:
+   
+   ```
+   python ETL_downloaded_chirps_data.py --lat-min -23.0 --lat-max -22.0 --lon-min -44.0 --lon-max -43.0 --start-year 2000 --end-year 2010
+   ```
+
+   If no arguments are provided, the script will process all the data as is.
+
+3. **Sequence Creation**: The script generates input (`x`) and output (`y`) data sequences over time, preparing them for use in time series prediction tasks.
+
+4. **Saving Processed Data**: After processing, the data is saved in a NetCDF file in the appropriate format for use in the STConvS2S model.
+
+
 ## Experiments
 
 Jupyter notebooks for the first sequence-to-sequence task (given the previous 5 grids, predict the next 5 grids) can be found in the [notebooks](https://github.com/MLRG-CEFET-RJ/stconvs2s/tree/master/notebooks) folder (see Table 1 and 3 in the paper).

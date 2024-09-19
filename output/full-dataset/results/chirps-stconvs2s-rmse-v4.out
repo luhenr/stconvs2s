@@ -1,0 +1,126 @@
+RUN MODEL: STCONVS2S-R
+Device: GPU
+Settings: Namespace(batch=15, chirps=True, cuda=0, email=False, epoch=80, hidden_dim=32, iteration=3, kernel_size=5, model='stconvs2s-r', no_seed=False, no_stop=False, num_layers=3, patience=16, plot=True, pre_trained=None, small_dataset=True, step=5, verbose=True, version='4', workers=4)
+[X_train] Shape: torch.Size([300, 1, 5, 50, 50])
+[y_train] Shape: torch.Size([300, 1, 5, 50, 50])
+[X_val] Shape: torch.Size([100, 1, 5, 50, 50])
+[y_val] Shape: torch.Size([100, 1, 5, 50, 50])
+[X_test] Shape: torch.Size([100, 1, 5, 50, 50])
+[y_test] Shape: torch.Size([100, 1, 5, 50, 50])
+Train on 300 samples, validate on 100 samples
+Epoch: 1/80 - loss: 6.5953 - val_loss: 7.2446
+=> Saving a new best
+Epoch: 2/80 - loss: 6.3439 - val_loss: 7.5066
+=> Early stopping counter: 1 out of 16
+Epoch: 3/80 - loss: 6.3039 - val_loss: 7.1965
+=> Saving a new best
+Epoch: 4/80 - loss: 6.2971 - val_loss: 7.1740
+=> Saving a new best
+Epoch: 5/80 - loss: 6.2569 - val_loss: 7.3855
+=> Early stopping counter: 1 out of 16
+Epoch: 6/80 - loss: 6.2498 - val_loss: 7.5710
+=> Early stopping counter: 2 out of 16
+Epoch: 7/80 - loss: 6.2464 - val_loss: 7.1711
+=> Saving a new best
+Epoch: 8/80 - loss: 6.2224 - val_loss: 7.2979
+=> Early stopping counter: 1 out of 16
+Epoch: 9/80 - loss: 6.2155 - val_loss: 7.2109
+=> Early stopping counter: 2 out of 16
+Epoch: 10/80 - loss: 6.2078 - val_loss: 7.2336
+=> Early stopping counter: 3 out of 16
+Epoch: 11/80 - loss: 6.1957 - val_loss: 7.1614
+=> Saving a new best
+Epoch: 12/80 - loss: 6.1907 - val_loss: 7.1117
+=> Saving a new best
+Epoch: 13/80 - loss: 6.1917 - val_loss: 7.1724
+=> Early stopping counter: 1 out of 16
+Epoch: 14/80 - loss: 6.1697 - val_loss: 7.1513
+=> Early stopping counter: 2 out of 16
+Epoch: 15/80 - loss: 6.1749 - val_loss: 7.1154
+=> Early stopping counter: 3 out of 16
+Epoch: 16/80 - loss: 6.1633 - val_loss: 7.1599
+=> Early stopping counter: 4 out of 16
+Epoch: 17/80 - loss: 6.1640 - val_loss: 7.1546
+=> Early stopping counter: 5 out of 16
+Epoch: 18/80 - loss: 6.1478 - val_loss: 7.1272
+=> Early stopping counter: 6 out of 16
+Epoch: 19/80 - loss: 6.1346 - val_loss: 7.2231
+=> Early stopping counter: 7 out of 16
+Epoch: 20/80 - loss: 6.1371 - val_loss: 7.2264
+=> Early stopping counter: 8 out of 16
+Epoch: 21/80 - loss: 6.1265 - val_loss: 7.1291
+=> Early stopping counter: 9 out of 16
+Epoch: 22/80 - loss: 6.1252 - val_loss: 7.1062
+=> Saving a new best
+Epoch: 23/80 - loss: 6.1029 - val_loss: 7.2374
+=> Early stopping counter: 1 out of 16
+Epoch: 24/80 - loss: 6.1112 - val_loss: 7.2489
+=> Early stopping counter: 2 out of 16
+Epoch: 25/80 - loss: 6.1072 - val_loss: 7.2023
+=> Early stopping counter: 3 out of 16
+Epoch: 26/80 - loss: 6.0912 - val_loss: 7.3371
+=> Early stopping counter: 4 out of 16
+Epoch: 27/80 - loss: 6.0779 - val_loss: 7.1978
+=> Early stopping counter: 5 out of 16
+Epoch: 28/80 - loss: 6.0749 - val_loss: 7.1760
+=> Early stopping counter: 6 out of 16
+Epoch: 29/80 - loss: 6.0843 - val_loss: 7.1838
+=> Early stopping counter: 7 out of 16
+Epoch: 30/80 - loss: 6.0450 - val_loss: 7.2827
+=> Early stopping counter: 8 out of 16
+Epoch: 31/80 - loss: 6.0504 - val_loss: 7.3901
+=> Early stopping counter: 9 out of 16
+Epoch: 32/80 - loss: 6.0418 - val_loss: 7.1420
+=> Early stopping counter: 10 out of 16
+Epoch: 33/80 - loss: 6.0323 - val_loss: 7.1801
+=> Early stopping counter: 11 out of 16
+Epoch: 34/80 - loss: 6.0248 - val_loss: 7.1777
+=> Early stopping counter: 12 out of 16
+Epoch: 35/80 - loss: 6.0271 - val_loss: 7.1514
+=> Early stopping counter: 13 out of 16
+Epoch: 36/80 - loss: 5.9890 - val_loss: 7.2442
+=> Early stopping counter: 14 out of 16
+Epoch: 37/80 - loss: 5.9952 - val_loss: 7.2102
+=> Early stopping counter: 15 out of 16
+Epoch: 38/80 - loss: 5.9760 - val_loss: 7.3536
+=> Early stopping counter: 16 out of 16
+=> Stopped
+
+Training time: 0:01:53.59 [113.58607053756714]
+=> Loaded checkpoint chirps_step5_4_20240917-135931.pth.tar (best epoch: 22, validation rmse: 7.1062)
+Training time/epochs: 0:00:02.99 [2.9891071194096615]
+>>>>>>>>> Metric per observation (lat x lon) at each time step (t)
+RMSE
+6.651638167245047,6.8730453082493375,6.957817895071847,7.053155830928257,7.096114090510777
+MAE
+3.1358673913138255,3.34100273677281,3.3283653940473283,3.4590691157749722,3.5047547476632253
+>>>>>>>>
+Test RMSE: 6.9292
+Test MAE: 3.3538
+[X_train] Shape: torch.Size([300, 1, 5, 50, 50])
+[y_train] Shape: torch.Size([300, 1, 5, 50, 50])
+[X_val] Shape: torch.Size([100, 1, 5, 50, 50])
+[y_val] Shape: torch.Size([100, 1, 5, 50, 50])
+[X_test] Shape: torch.Size([100, 1, 5, 50, 50])
+[y_test] Shape: torch.Size([100, 1, 5, 50, 50])
+Train on 300 samples, validate on 100 samples
+Epoch: 1/80 - loss: 6.5414 - val_loss: 7.5058
+=> Saving a new best
+Epoch: 2/80 - loss: 6.3363 - val_loss: 7.3884
+=> Saving a new best
+Epoch: 3/80 - loss: 6.3090 - val_loss: 7.1738
+=> Saving a new best
+Epoch: 4/80 - loss: 6.2876 - val_loss: 7.4057
+=> Early stopping counter: 1 out of 16
+Epoch: 5/80 - loss: 6.2776 - val_loss: 7.6365
+=> Early stopping counter: 2 out of 16
+Epoch: 6/80 - loss: 6.2721 - val_loss: 7.1743
+=> Early stopping counter: 3 out of 16
+Epoch: 7/80 - loss: 6.2344 - val_loss: 7.1630
+=> Saving a new best
+Epoch: 8/80 - loss: 6.2319 - val_loss: 7.1774
+=> Early stopping counter: 1 out of 16
+Epoch: 9/80 - loss: 6.2277 - val_loss: 7.2275
+=> Early stopping counter: 2 out of 16
+Epoch: 10/80 - loss: 6.2060 - val_loss: 7.2247
+=> Early stopping counter: 3 out of 16
